@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="singlecelldata", # Replace with your own username
+    name="singlecelldata", 
     version="1.0.0",
     author="Edwin Vans",
     author_email="vans.edw@gmail.com",
     description="A python package for managing single-cell RNA-seq datasets.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/edwinv87/singlecell",
+    url="https://edwinv87.github.io/singlecelldata",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
