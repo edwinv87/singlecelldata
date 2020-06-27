@@ -3,7 +3,7 @@ SingleCellData
 ==============
 
 A Python package that contains a class for managing single-cell RNA-seq datasets.
-See https://edwinv87.github.io/singlecell/ for more information and documentation. 
+See https://edwinv87.github.io/singlecelldata/ for more information and documentation. 
 
 """
 
