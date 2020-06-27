@@ -10,7 +10,7 @@ The sinclecelldata package can be easily installed using the following command:
 
 ## Documentation
 
-The SingleCell class reference manual can be found [here](docs/_build/latex/singlecelldata.pdf)
+The SingleCell class reference manual can be found [here](https://github.com/edwinv87/singlecelldata/blob/master/docs/_build/latex/singlecelldata.pdf)
 
 ## Usage
 
