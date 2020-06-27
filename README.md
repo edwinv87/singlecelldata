@@ -4,7 +4,7 @@ SingleCell is a python class available in the singlecelldata package for managin
 
 ## Installation
 
-The sinclecelldata package can be easily installed using the following command:
+The singlecelldata package can be easily installed using the following command:
 
 `pip install singlecelldata`
 
