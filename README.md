@@ -4,13 +4,13 @@ SingleCell is a python class available in the singlecelldata package for managin
 
 ## Installation
 
-The sinclecelldata package can be easily installed from PYPI using the following command:
+The sinclecelldata package can be easily installed using the following command:
 
 `pip install singlecelldata`
 
 ## Documentation
 
-Check out the [GitHub page](https://edwinv87.github.io/singlecelldata) for complete documentation.
+The SingleCell class reference manual can be found [here](docs/build/html/index.html)
 
 ## Usage
 
@@ -42,10 +42,6 @@ In the above example, a SingleCell object, sc, was ceated by passing the dataset
 ### Detailed Usage
 
 Detailed usage information can be found at
-
-### Class Reference Manual
-
-The SingleCell class reference manual can be found [here](docs/build/html/index.html)
 
 ## Contact
 
