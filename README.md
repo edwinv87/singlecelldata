@@ -41,7 +41,7 @@ In the above example, a SingleCell object, sc, was ceated by passing the dataset
 
 ### Detailed Usage
 
-Detailed usage information can be found at
+Coming soon!
 
 ## Contact
 
