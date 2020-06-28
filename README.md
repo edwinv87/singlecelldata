@@ -10,7 +10,7 @@ The singlecelldata package can be easily installed using the following command:
 
 ## Documentation
 
-The SingleCell class reference manual can be found [here](docs/_build/html/index.html)
+The SingleCell class reference manual can be found [here](https://github.com/edwinv87/singlecelldata/blob/master/docs/_build/html/index.html)
 
 ## Usage
 
