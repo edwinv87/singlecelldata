@@ -2,3 +2,8 @@ Release 1.0.0
 Release Date 23/06/2020
 Notes:
 - Renamed the package formerly known as singlecell to singlecelldata
+
+Release 1.0.1
+Release Date 01/07/2020
+Notes:
+- Added documentation and usage examples
