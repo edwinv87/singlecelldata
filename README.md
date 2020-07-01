@@ -12,9 +12,9 @@ The singlecelldata package can be easily installed using the following command:
 
 The SingleCell class reference manual can be found [here](https://singlecelldata.readthedocs.io/en/latest/index.html)
 
-## Usage
+## Using the SingleCell class
 
-### Basic Usage
+### Basic Example
 
 The SingleCell class can be used to create an object which stores single-cell gene expression data and additional data about genes and cells in their respective dataframes. To create a SingleCell object sc, the following python code can be used:
 
@@ -39,10 +39,10 @@ sc = SingleCell(dataset, data, celldata, genedata)
 
 In the above example, a SingleCell object, sc, was ceated by passing the dataset name and the main data, the cell data and gene data as Pandas dataframes. [Pandas](https://pandas.pydata.org/) is a powerpul python library for creating data structures from a variety of sources. Pandas can open and read data from numerous differernt file types such as csv files and creating dataframes from it. This enables the user to create SingleCell objects from a variety of different data file types.
 
-### Detailed Usage
+### Detailed Example
 
-Coming soon!
+More detailed example can be found [here](docs/SingleCell-Example.md)
 
 ## Contact
 
-Contact the author on vans.edw@gmail.com to give feedback/suggestions for further improvements and to report issues.
+Contact the author on <vans.edw@gmail.com> to give feedback/suggestions for further improvements and to report issues.
