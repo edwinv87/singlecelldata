@@ -41,7 +41,7 @@ In the above example, a SingleCell object, sc, was ceated by passing the dataset
 
 ### Detailed Example
 
-More detailed example can be found [here](docs/SingleCell-Example.md)
+More detailed example can be found [here](https://edwinv87.github.io/singlecelldata/docs/SingleCell-Example.html)
 
 ## Contact
 
