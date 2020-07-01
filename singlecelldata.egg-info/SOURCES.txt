@@ -1,7 +1,7 @@
 README.md
 setup.py
 singlecelldata/__init__.py
-singlecelldata/singlecelldata.py
+singlecelldata/singlecell.py
 singlecelldata.egg-info/PKG-INFO
 singlecelldata.egg-info/SOURCES.txt
 singlecelldata.egg-info/dependency_links.txt
