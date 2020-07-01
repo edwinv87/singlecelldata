@@ -1,28 +1,28 @@
 Metadata-Version: 2.1
 Name: singlecelldata
-Version: 1.0.0
+Version: 1.0.1
 Summary: A python package for managing single-cell RNA-seq datasets.
-Home-page: https://github.com/edwinv87/singlecell
+Home-page: https://edwinv87.github.io/singlecelldata
 Author: Edwin Vans
 Author-email: vans.edw@gmail.com
 License: UNKNOWN
 Description: # SingleCell
         
-        SingleCell is a python class available in the singlecelldata package for managing single-cell RNA-seq data. It contains three pandas dataframes; `data` for holding gene expression values (counts/normalized counts), `genedata` for holding more information about the genes e.g., gene names, and `celldata` which contains more information about cells such as cell types, labels etc. It is similar in concept to R package SingleCellExperiment on Bioconductor <https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html>.
+        SingleCell is a python class available in the singlecelldata package for managing single-cell RNA-seq data. It contains three pandas dataframes; `data` for holding gene expression values (counts/normalized counts), `genedata` for holding more information about the genes e.g., gene names, and `celldata` which contains more information about cells such as cell types, labels etc.
         
         ## Installation
         
-        The sinclecelldata package can be easily installed from PYPI using the following command:
+        The singlecelldata package can be easily installed using the following command:
         
         `pip install singlecelldata`
         
-        Alternatively, the singlecelldata package can also be installed from Anaconda Cloud using the Anaconda package distribution software. From the anaconda prompt run the following command to install singlecelldata package in your environment:
+        ## Documentation
         
-        `conda install -c edwinvans singlecelldata`
+        The SingleCell class reference manual can be found [here](https://singlecelldata.readthedocs.io/en/latest/index.html)
         
-        The user can also checkout the anaconda cloud page for more information <https://anaconda.org/edwinvans/singlecelldata>. The source code is available here on the GitHub repository.
+        ## Using the SingleCell class
         
-        ## Usage
+        ### Basic Example
         
         The SingleCell class can be used to create an object which stores single-cell gene expression data and additional data about genes and cells in their respective dataframes. To create a SingleCell object sc, the following python code can be used:
         
@@ -45,11 +45,15 @@ Description: # SingleCell
         sc = SingleCell(dataset, data, celldata, genedata)
         ```
         
-        In the above example, a SingleCell object, sc, was ceated by passing the dataset name and the main data, the cell data and gene data as pandas dataframes. Pandas is a powerpul python library for creating data structures from a variety of sources. Pandas can open and read data from numerous differernt file types such as csv files and creating dataframes from it. This enables the user to create SingleCell objects from different data file types. For more information on pandas see <https://pandas.pydata.org/>
+        In the above example, a SingleCell object, sc, was ceated by passing the dataset name and the main data, the cell data and gene data as Pandas dataframes. [Pandas](https://pandas.pydata.org/) is a powerpul python library for creating data structures from a variety of sources. Pandas can open and read data from numerous differernt file types such as csv files and creating dataframes from it. This enables the user to create SingleCell objects from a variety of different data file types.
+        
+        ### Detailed Example
+        
+        More detailed example can be found [here](https://edwinv87.github.io/singlecelldata/docs/SingleCell-Example.html)
         
         ## Contact
         
-        Contact the author on vans.edw@gmail.com to give feedback/suggestions for further improvements and to report issues.
+        Contact the author on <vans.edw@gmail.com> to give feedback/suggestions for further improvements and to report issues.
         
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
