@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="singlecelldata", 
-    version="1.0.1",
+    version="1.0.2",
     author="Edwin Vans",
-    author_email="vans.edw@gmail.com",
+    author_email="info@edwinvans.com",
     description="A python package for managing single-cell RNA-seq datasets.",
     long_description=long_description,
     long_description_content_type="text/markdown",
