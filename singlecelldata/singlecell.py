@@ -1,7 +1,9 @@
 # Import Packages
 import pandas as pd
 import numpy as np
+import os.path
 
+from .read_data import Read10X, ReadCSV
 
 
 class SingleCell:
@@ -55,56 +57,66 @@ class SingleCell:
 
 
     
-    def __init__(self, dataset, data, celldata = None, genedata = None):
+    def __init__(self, path, dataset, data_type):
         """
         Parameters
         ----------
 
+        path : str
+            The top level directory where data is stored. This directory must contain a folder by the 
+            dataset name where the acutal data files are stored.
+
         dataset : str
-            The name of the single-cell dataset.
+            The name of the single-cell dataset. Also the name of the folder inside path that contains the
+            actual data files. 
 
-        data : Pandas Dataframe
-            The main dataframe storing the gene expression counts/values.
-
-        celldata : Pandas Dataframe, optional
-            The dataframe or assay used to store more data (metadata) about cells. By default, a
-            dataframe will be created with one column 'cell_names' storing the cell names as 
-            Cell1, Cell2, ..., Celln.
-
-        genedata : Pandas Dataframe, optional
-            The dataframe or assay used to store more data (metadata) about genes. By default, a
-            dataframe will be created with one column 'gene_names' storing the gene names as 
-            Gene1, Gene2, ..., Gened.
+        data_type : str
+            The type of data stored inside the dataset folder in path. Current only "csv" for csv files,
+            and "10X" for the sparse data formats (matrix.mtx, genes.tsv, barcodes.tsv) available on the 
+            10X Genomics platform.
 
         """
     
         # TODO: Validate inputs
-
         self.dataset = dataset
-        self.data = data
-        self.dim = data.shape
 
-        if (type(genedata) is type(None)):
-            num_genes = data.shape[0]
-            gene_names = []
-            for i in range(num_genes):
-                gene_names.append('Gene' + str(i+1))
+        if (data_type == "csv"):
 
-            self.genedata = pd.DataFrame(gene_names, index = data.index, columns = ['gene_names'])
+            data, genedata, celldata = ReadCSV(path, self.dataset)
+            self.data = data
+            self.dim = data.shape
 
-        else:
-            self.genedata = genedata
+            if (type(genedata) is type(None)):
+                num_genes = data.shape[0]
+                gene_names = []
+                for i in range(num_genes):
+                    gene_names.append('Gene' + str(i+1))
 
-        if (type(celldata) is type(None)):
-            num_cells= data.shape[1]
-            cell_names = []
-            for i in range(num_cells):
-                cell_names.append('Cell' + str(i+1))
+                self.genedata = pd.DataFrame(gene_names, index = data.index, columns = ['gene_names'])
 
-            self.celldata = pd.DataFrame(cell_names, index = data.columns, columns = ['cell_names'])
-            
-        else:
-            self.celldata = celldata
+            else:
+                self.genedata = genedata
+
+            if (type(celldata) is type(None)):
+                num_cells= data.shape[1]
+                cell_names = []
+                for i in range(num_cells):
+                    cell_names.append('Cell' + str(i+1))
+
+                self.celldata = pd.DataFrame(cell_names, index = data.columns, columns = ['cell_names'])
+                
+            else:
+                self.celldata = celldata
+
+
+        elif (data_type == "10X"):
+
+            X, genes, barcodes = Read10X(path, self.dataset)
+
+            self.data = pd.DataFrame(X)
+            self.genedata = pd.DataFrame(genes, index = data.index, columns = ['gene_names'])
+            self.celldata = pd.DataFrame(barcodes, index = data.columns, columns = ['cell_barcodes'])
+
 
 
     def print(self): # Print the single cell object summary
