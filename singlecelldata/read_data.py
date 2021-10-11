@@ -65,7 +65,7 @@ def Read10X(path, dset_name):
     with open(path + dset_name + '/barcodes.tsv', 'r') as f:
         for line in f:
             fields = line.rstrip().split()
-            barcodes.append(fields[1])
+            barcodes.append(fields[0])
     assert(len(barcodes) == n_cells)
 
     return X, np.array(genes), np.array(barcodes)
