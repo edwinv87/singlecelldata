@@ -113,9 +113,10 @@ class SingleCell:
 
             X, genes, barcodes = Read10X(path, self.dataset)
 
-            self.data = pd.DataFrame(X)
-            self.genedata = pd.DataFrame(genes, index = data.index, columns = ['gene_names'])
-            self.celldata = pd.DataFrame(barcodes, index = data.columns, columns = ['cell_barcodes'])
+            self.data = pd.DataFrame(X.T)
+            self.dim = self.data.shape
+            self.genedata = pd.DataFrame(genes, index = self.data.index, columns = ['gene_names'])
+            self.celldata = pd.DataFrame(barcodes, index = self.data.columns, columns = ['cell_barcodes'])
 
 
 
