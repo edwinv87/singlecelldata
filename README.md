@@ -19,30 +19,24 @@ The SingleCell class reference manual can be found [here](https://singlecelldata
 The SingleCell class can be used to create an object which stores single-cell gene expression data and additional data about genes and cells in their respective dataframes. To create a SingleCell object sc, the following python code can be used:
 
 ```python
-import pandas as pd
+# Import SingleCell
 from singlecelldata import SingleCell
 
-dataset = 'biase'
+# Create the path and the dataset variables
+path = '../data/293t_jurkat/'
+dataset = '293t'
 
-data_path = "data/" + dataset + '/' + dataset + "_data.csv"
-celldata_path = "data/" + dataset + '/' + dataset + "_celldata.csv"
-genedata_path = "data/" + dataset + '/' + dataset + "_genedata.csv"
-
-# Create pandas dataframes by reading data from files
-data = pd.read_csv(data_path, index_col=0)
-celldata = pd.read_csv(celldata_path, index_col=0)
-genedata = pd.read_csv(genedata_path, index_col = 0)
-
-# Create a single cell object
-sc = SingleCell(dataset, data, celldata, genedata)
+# Create the SingleCell object
+sc = SingleCell(path, dataset, "10X")
+sc.print()
 ```
 
 In the above example, a SingleCell object, sc, was ceated by passing the dataset name and the main data, the cell data and gene data as Pandas dataframes. [Pandas](https://pandas.pydata.org/) is a powerpul python library for creating data structures from a variety of sources. Pandas can open and read data from numerous differernt file types such as csv files and creating dataframes from it. This enables the user to create SingleCell objects from a variety of different data file types.
 
 ### Detailed Example
 
-More detailed example can be found [here](https://edwinv87.github.io/singlecelldata/docs/SingleCell-Example.html)
+More detailed example can be found [here](https://anaconda.org/edwinvans/creating_singlecell_object)
 
 ## Contact
 
-Contact the author on <vans.edw@gmail.com> to give feedback/suggestions for further improvements and to report issues.
+Contact the author on <info@edwinvans.com> to give feedback/suggestions for further improvements and to report issues.
